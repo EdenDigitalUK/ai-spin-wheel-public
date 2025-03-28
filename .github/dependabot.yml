@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "netlify-cli"
+      - dependency-name: "@netlify/*"
+    # Only check production dependencies (not devDependencies)
+    allow:
+      - dependency-type: "production"
+    # Only alert for high/critical severity
+    severity: "high"
