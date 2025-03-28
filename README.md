@@ -9,6 +9,7 @@ An interactive decision wheel with AI-powered option generation. Perfect for ran
 # AI Spin Wheel
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)&nbsp;&nbsp;&nbsp;
+
 An interactive app that uses AI logic to generate custom spin wheel outcomes for gamified user experiences.
 
 ## ✨ Features
