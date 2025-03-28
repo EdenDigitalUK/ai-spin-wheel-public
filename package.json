@@ -4,7 +4,8 @@
   "description": "An interactive decision wheel with AI-powered option generation. Perfect for random selections, decision making, games, and classroom activities.",
   "main": "wheel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "netlify dev",
+    "start": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,6 @@
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "netlify-plugin-is-website-vulnerable": "^2.0.3",
-    "netlify-cli": "^12.0.0"
-  },
-  "scripts": {
-    "dev": "netlify dev",
-    "start": "netlify dev"
+    "netlify-cli": "^16.4.2"
   }
 }
