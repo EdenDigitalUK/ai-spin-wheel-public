@@ -124,6 +124,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Anil Clifford**
 
 <p align="left">
-<a href="https://www.linkedin.com/in/anilcliff/" target="_blank"><img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30"/></a>
-<a href="https://x.com/anil_clifford" target="_blank"><img align="center" src="https://img.shields.io/badge/twitter-1DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" height="30"/></a>
+<a href="https://www.linkedin.com/in/anilcliff/" target="_blank"><img align="center" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn Logo" height="30"/></a>
+<a href="https://x.com/anil_clifford" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="X Logo" height="30"/></a>
 </p>
