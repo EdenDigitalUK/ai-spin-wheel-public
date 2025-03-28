@@ -1,3 +1,4 @@
 .env
 .netlify
 node_modules
+SECURITY-AUDIT.md
