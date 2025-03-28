@@ -1,0 +1,302 @@
+:root {
+    --dark-bg: #242C31;
+    --primary: #ed0000;
+    --light-bg: #a0a0a0;
+    --secondary: #C3B6A2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-bg);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--dark-bg);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #f7f5e9;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title-icon {
+    width: 40px;
+    height: 40px;
+}
+
+h2, h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.prompt-input, .manual-input {
+    flex: 1;
+    min-width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: var(--dark-bg);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: var(--secondary);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Wheel Section */
+.wheel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+#wheel {
+    width: 100%;
+    height: 100%;
+}
+
+
+.wheel-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#spin-btn {
+    background-color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 40px;
+}
+
+#spin-btn:hover {
+    background-color: var(--dark-bg);
+}
+
+.sound-toggle {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
+#sound-btn {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    min-width: 80px;
+    transition: background-color 0.3s;
+}
+
+#sound-btn.on {
+    background-color: var(--primary);
+}
+
+/* Result Section */
+.result-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#result {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Saved Wheels */
+.saved-wheels {
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.saved-wheels-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#wheel-name, #saved-wheels-list {
+    height: 40px;
+}
+
+#save-btn, #load-btn {
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#wheel-name {
+    flex: 1;
+}
+
+#saved-wheels-list {
+    flex: 1;
+}
+
+/* Loading Overlay */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+#loading.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .wheel-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        max-width: 400px;
+        margin: 0 auto 20px;
+    }
+    
+    #wheel {
+        width: 100%;
+        height: 100%;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .saved-wheels-controls {
+        flex-direction: column;
+    }
+    
+    #wheel-name, #saved-wheels-list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90vw;
+        padding: 0 10px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    #spin-btn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+    
+    input[type="text"], textarea, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

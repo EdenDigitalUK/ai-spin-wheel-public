@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Spin Wheel Creator</title>
+        <link rel="icon" type="image/png" href="assets/spinwheel-icon.png">
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><img src="assets/spinwheel-icon.png" class="title-icon">AI Spin Wheel Creator</h1>
+        
+        <div class="input-section">
+            <div class="prompt-input">
+                <label for="prompt">Enter prompt (e.g., "5 pizza toppings"):</label>
+                <input type="text" id="prompt" placeholder="Enter your prompt here">
+                <button id="generate-btn">Generate Options</button>
+            </div>
+            
+            <div class="manual-input">
+                <label>Or enter options manually (one per line):</label>
+                <textarea id="manual-options" rows="5" placeholder="Option 1&#10;Option 2&#10;Option 3"></textarea>
+                <button id="manual-btn">Use These Options</button>
+            </div>
+        </div>
+        
+        <div class="wheel-section">
+            <div class="wheel-container">
+                <canvas id="wheel" width="400" height="400"></canvas>
+                <div id="selector"></div>
+            </div>
+            <div class="wheel-controls">
+                <button id="spin-btn" disabled>SPIN</button>
+            </div>
+        </div>
+        
+        <div class="result-section">
+            <h2>Result: <span id="result">Spin the wheel!</span></h2>
+            <button id="sound-btn">🔊 Sound On</button>
+        </div>
+        
+        <div class="saved-wheels">
+            <h3>Saved Wheels</h3>
+            <div class="saved-wheels-controls">
+                <input type="text" id="wheel-name" placeholder="Name your wheel">
+                <button id="save-btn" disabled>Save Wheel</button>
+                <select id="saved-wheels-list">
+                    <option value="">-- Select a saved wheel --</option>
+                </select>
+                <button id="load-btn">Load</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Generating options...</p>
+    </div>
+    
+    <script src="wheel.js"></script>
+</body>
+</html>

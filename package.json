@@ -1,0 +1,32 @@
+{
+  "name": "ai-spin-wheel",
+  "version": "1.1.0",
+  "description": "An interactive decision wheel with AI-powered option generation. Perfect for random selections, decision making, games, and classroom activities.",
+  "main": "wheel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcaneum/ai-spin-wheel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arcaneum/ai-spin-wheel/issues"
+  },
+  "homepage": "https://github.com/arcaneum/ai-spin-wheel#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "netlify-plugin-is-website-vulnerable": "^2.0.3",
+    "netlify-cli": "^12.0.0"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "start": "netlify dev"
+  }
+}
